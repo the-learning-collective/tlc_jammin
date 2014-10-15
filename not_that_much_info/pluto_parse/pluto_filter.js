@@ -79,5 +79,3 @@ function saveAsVarPretty(fileName, objName){
 
 saveAsVarPretty('Permits.js', 'bushwickPermits');
 
-
-ziggyTools.jsonRePrint()
