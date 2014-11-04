@@ -10,7 +10,7 @@ var data = JSON.parse(geoFile);
 
 
 //creates adddress for
-field (var i = 0; i <data.features.length; i++) {
+for (var i = 0; i <data.features.length; i++) {
   var address = data.features[i].properties.Bushwick_3 + " " + data.features[i].properties.Bushwick_4;
   data.features[i].properties.address = address;
 };
@@ -19,6 +19,8 @@ field (var i = 0; i <data.features.length; i++) {
 //renames
 var newFields = ['bin', 'jobType', 'block', 'lot', 'workType', 'permitType', 'expDate', 'startDate', 'PermitteeName', 'PermitteeBis', 'PermitteePhone', 'PermitteeType', 'ownerType', 'nonProfit', 'ownerBis', 'ownerName', 'ownerAddress', 'ownerCity', 'ownerPhone', 'plutoOwner', 'LON', 'LAT', 'jobNum', 'res', 'issueDate'];
 var oldFields = ['Bushwick_2', 'Bushwick_7', 'Bushwick_9', 'Bushwic_10', 'Bushwic_17', 'Bushwic_20', 'Bushwic_27', 'Bushwic_28', 'Bushwic_29', 'Bushwic_30', 'Bushwic_31', 'Bushwic_32', 'Bushwic_40', 'Bushwic_41', 'Bushwic_42', 'Bushwic_43', 'Bushwic_44', 'Bushwic_45', 'Bushwic_46', 'Bushwic_76', 'Bushwi_134', 'Bushwi_135', 'Bushwick_5', 'Bushwic_14', 'Bushwic_26'];
+
+
 
 for (var i = 0; i <data.features.length; i++) {
   
@@ -35,6 +37,7 @@ newFields.push('address');
 for (var i = 0; i <data.features.length; i++) {
   data.features[i].properties = _.pick(data.features[i].properties, newFields);
 };
+
 //turns data back into string for file writing 
 var stringData = JSON.stringify(data);
 
