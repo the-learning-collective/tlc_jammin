@@ -1,3 +1,16 @@
+    // CHALLENGE: REWRIE LIKE THIS:
+    // thing
+    //     .rename(data)
+    //     .keepOnlyNewFields()
+    //     .saveAsPrettyVariable()
+
+    // CHALLENGE 2:
+    // write a script from scratch that takes two csv's as an input 
+    // and writes a merged, mutated version as its final step
+    // using Austin's parser script for crib notes
+
+
+
 var fs = require('fs');
 var _ = require('underscore');
 
